@@ -296,7 +296,7 @@ class ChildrenField(Field):
     """
     def __init__(self, xpath, cls, makelist = False):
         self.__xpath = xpath
-        if instanceof(cls, str):
+        if isinstance(cls, str):
             self.__cls = globals()[cls]
         else:
             self.__cls   = cls
@@ -329,7 +329,7 @@ class FirstChildField(Field):
     """
     def __init__(self, xpath, cls):
         self.__xpath = xpath
-        if instanceof(cls, str):
+        if isinstance(cls, str):
             self.__cls = globals()[cls]
         else:
             self.__cls   = cls
